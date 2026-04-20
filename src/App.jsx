@@ -115,7 +115,7 @@ function App() {
     })
 
     const mesh = new THREE.Mesh(geometry, material)
-    mesh.position.y = -0.55
+    mesh.position.y = 0.1
     scene.add(mesh)
 
     let mouseX = 0
@@ -140,7 +140,7 @@ function App() {
 
       mesh.rotation.y += 0.01 + (mouseX * 0.5 - mesh.rotation.y) * 0.05
       mesh.rotation.x += 0.005 + (mouseY * 0.5 - mesh.rotation.x) * 0.05
-      mesh.position.y = -0.55 + Math.sin(elapsed * 0.5) * 0.1
+      mesh.position.y = 0.1 + Math.sin(elapsed * 0.5) * 0.1
 
       renderer.render(scene, camera)
     }
