@@ -168,10 +168,10 @@ function App() {
       <main className="hero">
         <h1 className="hero-title">Big Unknown</h1>
         <p className="hero-tagline">
-          <strong>the future is fluid.</strong><br />
+          <strong>the future is fluid</strong><br />
           <br />
           the post-work era is here.<br />
-          what you're afraid of losing was never really yours
+          what you're afraid of losing was never really yours.
         </p>
       </main>
       <section className="newsletter-section">
@@ -189,15 +189,15 @@ function App() {
       </section>
 
       <section className="questions-section">
-        <p className="questions-label">Six Questions</p>
+        <p className="questions-label">six questions</p>
         <ol className="questions-list">
           {[
-            'What remains of us when work, as we knew it, disappears?',
-            'Who do we become when machines can think faster than we can feel?',
-            'What is worth doing, simply because we are alive?',
-            'How do we find meaning when productivity is no longer the measure?',
-            'What kind of community do we need in a world we no longer recognise?',
-            'And if the future is fluid, who gets to shape it?',
+            'what remains of us when work, as we knew it, disappears?',
+            'who do we become when machines can think faster than we can feel?',
+            'what is worth doing, simply because we are alive?',
+            'how do we find meaning when productivity is no longer the measure?',
+            'what kind of community do we need in a world we no longer recognise?',
+            'and if the future is fluid, who gets to shape it?',
           ].map((q, i) => (
             <li key={i} className="question-item">
               <span className="question-num">{String(i + 1).padStart(2, '0')}</span>
@@ -206,7 +206,7 @@ function App() {
           ))}
         </ol>
         <p className="questions-closing">
-          They're building agents. We're building what happens after agents build everything.<br />Join us.
+          they're building agents. we're building what happens after agents build everything.<br />join us.
         </p>
       </section>
     </>
