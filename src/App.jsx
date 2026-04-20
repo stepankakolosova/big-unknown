@@ -115,7 +115,7 @@ function App() {
     })
 
     const mesh = new THREE.Mesh(geometry, material)
-    mesh.position.y = -0.9
+    mesh.position.y = -0.55
     scene.add(mesh)
 
     let mouseX = 0
@@ -140,7 +140,7 @@ function App() {
 
       mesh.rotation.y += 0.01 + (mouseX * 0.5 - mesh.rotation.y) * 0.05
       mesh.rotation.x += 0.005 + (mouseY * 0.5 - mesh.rotation.x) * 0.05
-      mesh.position.y = -0.9 + Math.sin(elapsed * 0.5) * 0.1
+      mesh.position.y = -0.55 + Math.sin(elapsed * 0.5) * 0.1
 
       renderer.render(scene, camera)
     }
@@ -168,8 +168,9 @@ function App() {
       <main className="hero">
         <h1 className="hero-title">Big Unknown</h1>
         <p className="hero-tagline">
-          the future is fluid. the post-work era is here.<br />
+          <strong>the future is fluid.</strong><br />
           <br />
+          the post-work era is here.<br />
           what you're afraid of losing was never really yours
         </p>
       </main>
@@ -185,6 +186,28 @@ function App() {
             title="Newsletter signup"
           />
         </div>
+      </section>
+
+      <section className="questions-section">
+        <p className="questions-label">Six Questions</p>
+        <ol className="questions-list">
+          {[
+            'What remains of us when work, as we knew it, disappears?',
+            'Who do we become when machines can think faster than we can feel?',
+            'What is worth doing, simply because we are alive?',
+            'How do we find meaning when productivity is no longer the measure?',
+            'What kind of community do we need in a world we no longer recognise?',
+            'And if the future is fluid, who gets to shape it?',
+          ].map((q, i) => (
+            <li key={i} className="question-item">
+              <span className="question-num">{String(i + 1).padStart(2, '0')}</span>
+              <span className="question-text">{q}</span>
+            </li>
+          ))}
+        </ol>
+        <p className="questions-closing">
+          They're building agents. We're building what happens after agents build everything.<br />Join us.
+        </p>
       </section>
     </>
   )
